@@ -57,9 +57,9 @@ function init() {
 	document.addEventListener('touchstart', onDocumentTouchStart, false);
 	document.addEventListener('touchmove', onDocumentTouchMove, false);
 	window.addEventListener('resize', onWindowResize, false);
-	fb.addEventListener("click", klik, false);
-	gplus.addEventListener("click", klik, false);
-	eml.addEventListener("click", klik, false);
+	fb.addEventListener("touchstart", klik, false);
+	gplus.addEventListener("touchstart", klik, false);
+	eml.addEventListener("touchstart", klik, false);
 }
 function klik(event) {
 	var link = this.getAttribute('href');
