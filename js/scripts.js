@@ -61,10 +61,9 @@ function init() {
 	gplus.addEventListener("touchstart", klik, false);
 	eml.addEventListener("touchstart", klik, false);
 }
-function klik(event) {
+function klik() {
 	var link = this.getAttribute('href');
-	event.preventDefault();
-	window.location.href = link;
+	window.open(link, '_blank');
 }
 function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
