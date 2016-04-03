@@ -1,8 +1,8 @@
 <script>
 function myFunction() {
-var ua = navigator.userAgent;
-var isAndroidNative = ((ua.indexOf('Mozilla/5.0') > -1) && (ua.indexOf('Android') > -1) && !(ua.indexOf('Chrome') > -1) && (ua.indexOf('Version') > -1));
-return isAndroidNative;
+var nua = navigator.userAgent;
+var is_android = ((nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 &&     nua.indexOf('AppleWebKit') > -1) && !(nua.indexOf('Chrome') > -1));
+return is_android;
 }
 alert(myFunction());
 </script>
