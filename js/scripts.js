@@ -63,7 +63,8 @@ function init() {
 }
 function klik() {
 	var link = this.getAttribute('href');
-	window.open(link, '_blank');
+	var buka = window.open(link, '_blank');
+        buka.focus();
 }
 function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
