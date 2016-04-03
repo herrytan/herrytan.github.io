@@ -63,7 +63,8 @@ function init() {
 }
 function klik() {
 	var link = this.getAttribute('href');
-	window.open(link, '_blank').focus();
+	window.location.href = link;
+        return false;
 }
 function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
