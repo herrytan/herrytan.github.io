@@ -1,0 +1,8 @@
+<script>
+function myFunction() {
+var ua = navigator.userAgent;
+var isAndroidNative = ((ua.indexOf('Mozilla/5.0') > -1) && (ua.indexOf('Android') > -1) && !(ua.indexOf('Chrome') > -1) && (ua.indexOf('Version') > -1));
+return isAndroidNative;
+}
+alert(myFunction());
+</script>
