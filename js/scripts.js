@@ -77,18 +77,18 @@ function init() {
 	document.addEventListener('touchstart', onDocumentTouchStart, false);
 	document.addEventListener('touchmove', onDocumentTouchMove, false);
 	window.addEventListener('resize', onWindowResize, false);
-	//if( isMobile.any() ) {
-	//		fb.addEventListener("touchstart", klik, false);
-	//		gplus.addEventListener("touchstart", klik, false);
-	//		eml.addEventListener("touchstart", klik, false);
-	//}
+	if( isMobile.any() ) {
+			fb.addEventListener("touchstart", klik, false);
+			gplus.addEventListener("touchstart", klik, false);
+			eml.addEventListener("touchstart", klik, false);
+	}
 }
-//function klik(evt) {
-//	evt.preventDefault();
-//	var link = this.getAttribute('href');
-//	window.location.href = link;
-//        return false;
-//}
+function klik(evt) {
+	evt.preventDefault();
+	var link = this.getAttribute('href');
+	window.location.href = link;
+       return false;
+}
 //function kliks(evt) {
 //			evt.preventDefault();
 //	        return false;
