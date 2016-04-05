@@ -85,6 +85,7 @@ function init() {
 }
 function klik(evt) {
 	evt.preventDefault();
+	evt.stopPropagation();
 	var link = this.getAttribute('href');
 	window.location.href = link;
        return false;
