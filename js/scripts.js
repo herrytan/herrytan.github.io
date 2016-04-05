@@ -1,23 +1,23 @@
 var isMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        },
-        BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i);
-        },
-        any: function() {
-            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-        }
-    };
+	Android : function () {
+		return navigator.userAgent.match(/Android/i);
+	},
+	BlackBerry : function () {
+		return navigator.userAgent.match(/BlackBerry/i);
+	},
+	iOS : function () {
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	},
+	Opera : function () {
+		return navigator.userAgent.match(/Opera Mini/i);
+	},
+	Windows : function () {
+		return navigator.userAgent.match(/IEMobile/i);
+	},
+	any : function () {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+};
 var camera, scene, renderer;
 var geometry, material, mesh;
 var target = new THREE.Vector3();
@@ -77,13 +77,13 @@ function init() {
 	document.addEventListener('touchstart', onDocumentTouchStart, false);
 	document.addEventListener('touchmove', onDocumentTouchMove, false);
 	window.addEventListener('resize', onWindowResize, false);
-	if( isMobile.any() ) {
-			fb.addEventListener("click", kliks, false);
-			gplus.addEventListener("click", kliks, false);
-			eml.addEventListener("click", kliks, false);
-			fb.addEventListener("touchstart", klik, false);
-			gplus.addEventListener("touchstart", klik, false);
-			eml.addEventListener("touchstart", klik, false);
+	if (isMobile.any()) {
+		fb.addEventListener("click", kliks, false);
+		gplus.addEventListener("click", kliks, false);
+		eml.addEventListener("click", kliks, false);
+		fb.addEventListener("touchstart", klik, false);
+		gplus.addEventListener("touchstart", klik, false);
+		eml.addEventListener("touchstart", klik, false);
 	}
 }
 function klik(evt) {
@@ -91,10 +91,10 @@ function klik(evt) {
 	evt.stopPropagation();
 	var link = this.getAttribute('href');
 	window.location.href = link;
-       return false;
+	return false;
 }
 function kliks() {
-	        return false;
+	return false;
 }
 
 function onWindowResize() {
