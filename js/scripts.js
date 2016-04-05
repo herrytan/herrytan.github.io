@@ -1,3 +1,23 @@
+var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
 var camera, scene, renderer;
 var geometry, material, mesh;
 var target = new THREE.Vector3();
@@ -57,15 +77,23 @@ function init() {
 	document.addEventListener('touchstart', onDocumentTouchStart, false);
 	document.addEventListener('touchmove', onDocumentTouchMove, false);
 	window.addEventListener('resize', onWindowResize, false);
-	fb.addEventListener("touchstart", klik, false);
-	gplus.addEventListener("touchstart", klik, false);
-	eml.addEventListener("touchstart", klik, false);
+	//if( isMobile.any() ) {
+	//		fb.addEventListener("touchstart", klik, false);
+	//		gplus.addEventListener("touchstart", klik, false);
+	//		eml.addEventListener("touchstart", klik, false);
+	//}
 }
-function klik() {
-	var link = this.getAttribute('href');
-	window.location.href = link;
-        return false;
-}
+//function klik(evt) {
+//	evt.preventDefault();
+//	var link = this.getAttribute('href');
+//	window.location.href = link;
+//        return false;
+//}
+//function kliks(evt) {
+//			evt.preventDefault();
+//	        return false;
+//}
+//
 function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
