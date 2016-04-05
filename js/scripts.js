@@ -78,6 +78,9 @@ function init() {
 	document.addEventListener('touchmove', onDocumentTouchMove, false);
 	window.addEventListener('resize', onWindowResize, false);
 	if( isMobile.any() ) {
+			fb.addEventListener("click", kliks, false);
+			gplus.addEventListener("click", kliks, false);
+			eml.addEventListener("click", kliks, false);
 			fb.addEventListener("touchstart", klik, false);
 			gplus.addEventListener("touchstart", klik, false);
 			eml.addEventListener("touchstart", klik, false);
@@ -90,11 +93,10 @@ function klik(evt) {
 	window.location.href = link;
        return false;
 }
-//function kliks(evt) {
-//			evt.preventDefault();
-//	        return false;
-//}
-//
+function kliks() {
+	        return false;
+}
+
 function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
