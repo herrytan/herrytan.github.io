@@ -30,27 +30,27 @@ function init() {
 	camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
 	scene = new THREE.Scene();
 	var sides = [{
-			url : 'Bridge2/posx.jpg',
+			url : 'images/posx.jpg',
 			position : [-512, 0, 0],
 			rotation : [0, Math.PI / 2, 0]
 		}, {
-			url : 'Bridge2/negx.jpg',
+			url : 'images/negx.jpg',
 			position : [512, 0, 0],
 			rotation : [0, -Math.PI / 2, 0]
 		}, {
-			url : 'Bridge2/posy.jpg',
+			url : 'images/posy.jpg',
 			position : [0, 512, 0],
 			rotation : [Math.PI / 2, 0, Math.PI]
 		}, {
-			url : 'Bridge2/negy.jpg',
+			url : 'images/negy.jpg',
 			position : [0, -512, 0],
 			rotation : [ - Math.PI / 2, 0, Math.PI]
 		}, {
-			url : 'Bridge2/posz.jpg',
+			url : 'images/posz.jpg',
 			position : [0, 0, 512],
 			rotation : [0, Math.PI, 0]
 		}, {
-			url : 'Bridge2/negz.jpg',
+			url : 'images/negz.jpg',
 			position : [0, 0, -512],
 			rotation : [0, 0, 0]
 		}
