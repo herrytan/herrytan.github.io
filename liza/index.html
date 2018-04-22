@@ -1,0 +1,73 @@
+
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Liza Calculator</title>
+      <meta name="description" content="Liza Calculator">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         body {font-family: Arial, Helvetica, sans-serif;}
+         input[type=text], select, textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         resize: vertical;
+         }
+         input[type=submit] {
+         background-color: #4CAF50;
+         color: white;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         }
+         input[type=submit]:hover {
+         background-color: #45a049;
+         }
+         .container {
+         border-radius: 5px;
+         background-color: #f2f2f2;
+         padding: 20px;
+         }
+      </style>
+      <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <h3>Liza Calculator</h3>
+      <div class="container">
+         <form>
+            <label for="liza">Jumlah LIZA :</label>
+            <input type="text" id="liza" name="liza" placeholder="Jumlah Koin LIZA">
+            <label for="hari">Jumlah Hari :</label>
+            <input type="text" id="hari" name="hari" placeholder="Jumlah Hari">
+            <input id="buton" type="button" value="Submit">
+         </form>
+      </div>
+      <h3>Total Akumulasi 10% : <strong id="hasil" style="color:green"></strong></h3>
+      <script>
+         var hasil = 0;
+         
+         document.getElementById("buton").onclick = function() {myFunction()};
+         function calc(liza){
+             return liza+(liza*0.1);
+         }
+         function myFunction(){  
+           var liza = parseInt(document.getElementById("liza").value);
+         var hari = parseInt(document.getElementById("hari").value);     
+            for(i=0;i<hari;i++){
+               liza = calc(liza);
+            }
+            document.getElementById("hasil").innerHTML = liza;
+         }
+      </script>
+   </body>
+</html>
+
